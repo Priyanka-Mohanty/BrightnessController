@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+//noinspection GroovyMissingReturnStatement,GroovyMissingReturnStatement
+android {
+    compileSdkVersion 29
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        applicationId "com.priyanka.brightnesscontroller"
+        minSdkVersion 9
+        targetSdkVersion 29
+        versionCode 2
+        versionName "1.1"
+        // Enabling multidex support.
+        multiDexEnabled false
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+        dexOptions {
+            javaMaxHeapSize "4g"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.13'
+    implementation 'com.android.support:appcompat-v7:25.4.0'
+}

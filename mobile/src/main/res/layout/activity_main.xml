@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/LstPeriodOptions"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnLL"
+            android:layout_weight="1.5"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_vertical_margin"
+            tools:context="com.priyanka.brightnesscontroller.MainActivity">
+
+            <TextView
+                android:id="@+id/text_brightness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:text="@string/text_brightness"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.WindowTitle"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHighlight="@color/colorPrimary" />
+
+            <SeekBar
+                android:id="@+id/seek_brightbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/text_brightness" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_top_margin">
+
+                <ImageView
+                    android:id="@+id/img_brightness_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_brightness_low"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/img_brightness_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/img_brightness_low"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_brightness_medium"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/img_brightness_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/img_brightness_medium"
+                    android:src="@drawable/ic_brightness_high"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/activity_top_margin"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_rate"
+                style="@style/ButtonStyle"
+                android:text="@string/text_rate" />
+
+            <Button
+                android:id="@+id/btn_feedback"
+                style="@style/ButtonStyle"
+                android:text="@string/text_feedback" />
+
+            <Button
+                android:id="@+id/btn_share"
+                style="@style/ButtonStyle"
+                android:text="@string/text_share" />
+
+            <TextView
+                style="@style/TextStyle"
+                android:text="@string/text_info" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
