@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ตัวควบคุมความสว่าง</string>
+    <string name="select_language">เลือกภาษา:</string>
+    <string name="permission_denied">ปฏิเสธการอนุญาตในการเขียนการตั้งค่า แอปต้องการสิ่งนี้</string>
+    <string name="brightness_level">ระดับความสว่าง: %1$d</string>
+    <string name="rate_app">ให้คะแนนแอป</string>
+    <string name="share_app">แชร์แอป</string>
+    <string name="feedback">ข้อเสนอแนะ</string>
+    <string name="no_share_app">ไม่ได้ติดตั้งแอปสำหรับการแชร์</string>
+    <string name="no_email_app">ไม่ได้ติดตั้งแอปอีเมล</string>
+    <string name="share_subject">แอปพลิเคชันตัวควบคุมความสว่าง</string>
+    <string name="share_text">ตัวควบคุมความสว่าง:\n\n(เปิดใน Google Play Store เพื่อดาวน์โหลดแอปพลิเคชัน)\n%1$s</string>
+    <string name="email_subject">ข้อเสนอแนะจากผู้ใช้ : แอปพลิเคชันตัวควบคุมความสว่าง</string>
+</resources>

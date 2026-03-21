@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">متحكم السطوع</string>
+    <string name="select_language">اختر اللغة:</string>
+    <string name="permission_denied">تم رفض إذن كتابة الإعدادات. التطبيق يتطلب هذا.</string>
+    <string name="brightness_level">مستوى السطوع: %1$d</string>
+    <string name="rate_app">تقييم التطبيق</string>
+    <string name="share_app">مشاركة التطبيق</string>
+    <string name="feedback">التعليقات</string>
+    <string name="no_share_app">لا توجد تطبيقات مثبتة للمشاركة.</string>
+    <string name="no_email_app">لا يوجد عميل بريد إلكتروني مثبت.</string>
+    <string name="share_subject">تطبيق متحكم السطوع</string>
+    <string name="share_text">متحكم السطوع:\n\n(افتحه في متجر Google Play لتنزيل التطبيق)\n%1$s</string>
+    <string name="email_subject">تعليقات المستخدم: تطبيق متحكم السطوع</string>
+</resources>

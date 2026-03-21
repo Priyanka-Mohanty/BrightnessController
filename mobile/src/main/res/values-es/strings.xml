@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Controlador de Brillo</string>
+    <string name="select_language">Seleccionar idioma:</string>
+    <string name="permission_denied">Permiso para escribir configuraciones denegado. La aplicación lo requiere.</string>
+    <string name="brightness_level">Nivel de Brillo: %1$d</string>
+    <string name="rate_app">Calificar App</string>
+    <string name="share_app">Compartir App</string>
+    <string name="feedback">Comentarios</string>
+    <string name="no_share_app">No hay aplicación instalada para compartir.</string>
+    <string name="no_email_app">No hay cliente de correo instalado.</string>
+    <string name="share_subject">Aplicación Controlador de Brillo</string>
+    <string name="share_text">Controlador de Brillo:\n\n(Ábrelo en Google Play Store para descargar la aplicación)\n%1$s</string>
+    <string name="email_subject">Comentarios del usuario : Aplicación Controlador de Brillo</string>
+</resources>

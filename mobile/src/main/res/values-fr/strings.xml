@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Contrôleur de Luminosité</string>
+    <string name="select_language">Choisir la langue :</string>
+    <string name="permission_denied">Autorisation d\'écriture des paramètres refusée. L\'application en a besoin.</string>
+    <string name="brightness_level">Niveau de Luminosité: %1$d</string>
+    <string name="rate_app">Évaluer l\'App</string>
+    <string name="share_app">Partager l\'App</string>
+    <string name="feedback">Commentaires</string>
+    <string name="no_share_app">Aucune application installée pour le partage.</string>
+    <string name="no_email_app">Aucun client de messagerie installé.</string>
+    <string name="share_subject">Application Contrôleur de Luminosité</string>
+    <string name="share_text">Contrôleur de Luminosité :\n\n(Ouvrez-le dans Google Play Store pour télécharger l\'application)\n%1$s</string>
+    <string name="email_subject">Commentaires des utilisateurs : Application Contrôleur de Luminosité</string>
+</resources>

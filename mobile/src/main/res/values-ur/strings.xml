@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">برائٹنس کنٹرولر</string>
+    <string name="select_language">زبان منتخب کریں:</string>
+    <string name="permission_denied">ترتیبات لکھنے کی اجازت نہیں دی گئی۔ ایپ کو اس کی ضرورت ہے۔</string>
+    <string name="brightness_level">برائٹنس لیول: %1$d</string>
+    <string name="rate_app">ایپ کی درجہ بندی کریں</string>
+    <string name="share_app">ایپ شیئر کریں</string>
+    <string name="feedback">تاثرات</string>
+    <string name="no_share_app">شیئر کرنے کے لیے کوئی ایپ انسٹال نہیں ہے۔</string>
+    <string name="no_email_app">کوئی ای میل کلائنٹ انسٹال نہیں ہے۔</string>
+    <string name="share_subject">برائٹنس کنٹرولر ایپلی کیشن</string>
+    <string name="share_text">برائٹنس کنٹرولر:\n\n(ڈاؤن لوڈ کرنے کے لیے اسے گوگل پلے اسٹور میں کھولیں)\n%1$s</string>
+    <string name="email_subject">صارف کے تاثرات: برائٹنس کنٹرولر ایپلی کیشن</string>
+</resources>

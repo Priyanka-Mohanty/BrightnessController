@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ಬ್ರೈಟ್‌ನೆಸ್ ಕಂಟ್ರೋಲರ್</string>
+    <string name="select_language">ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ:</string>
+    <string name="permission_denied">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಬರೆಯುವ ಅನುಮತಿ ನಿರಾಕರಿಸಲಾಗಿದೆ. ಅಪ್ಲಿಕೇಶನ್\u200Cಗೆ ಇದರ ಅಗತ್ಯವಿದೆ.</string>
+    <string name="brightness_level">ಬ್ರೈಟ್\u200Cನೆಸ್ ಮಟ್ಟ: %1$d</string>
+    <string name="rate_app">ಅಪ್ಲಿಕೇಶನ್ ರೇಟ್ ಮಾಡಿ</string>
+    <string name="share_app">ಅಪ್ಲಿಕೇಶನ್ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="feedback">ಪ್ರತಿಕ್ರಿಯೆ</string>
+    <string name="no_share_app">ಹಂಚಿಕೊಳ್ಳಲು ಯಾವುದೇ ಅಪ್ಲಿಕೇಶನ್ ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ.</string>
+    <string name="no_email_app">ಯಾವುದೇ ಇಮೇಲ್ ಕ್ಲೈಂಟ್ ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ.</string>
+    <string name="share_subject">ಬ್ರೈಟ್\u200Cನೆಸ್ ಕಂಟ್ರೋಲರ್ ಅಪ್ಲಿಕೇಶನ್</string>
+    <string name="share_text">ಬ್ರೈಟ್\u200Cನೆಸ್ ಕಂಟ್ರೋಲರ್:\n\n(ಡೌನ್\u200Cಲೋಡ್ ಮಾಡಲು ಗೂಗಲ್ ಪ್ಲೇ ಸ್ಟೋರ್\u200Cನಲ್ಲಿ ತೆರೆಯಿರಿ)\n%1$s</string>
+    <string name="email_subject">ಬಳಕೆದಾರರ ಪ್ರತಿಕ್ರಿಯೆ : ಬ್ರೈಟ್\u200Cನೆಸ್ ಕಂಟ್ರೋಲರ್ ಅಪ್ಲಿಕೇಶನ್</string>
+</resources>

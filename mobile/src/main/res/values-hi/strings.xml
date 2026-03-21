@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ब्राइटनेस कंट्रोलर</string>
+    <string name="select_language">भाषा चुनें:</string>
+    <string name="permission_denied">सेटिंग्स लिखने की अनुमति नहीं दी गई। ऐप को इसकी आवश्यकता है।</string>
+    <string name="brightness_level">ब्राइटनेस लेवल: %1$d</string>
+    <string name="rate_app">ऐप को रेट करें</string>
+    <string name="share_app">ऐप शेयर करें</string>
+    <string name="feedback">प्रतिक्रिया</string>
+    <string name="no_share_app">शेयर करने के लिए कोई ऐप इंस्टॉल नहीं है।</string>
+    <string name="no_email_app">कोई ईमेल क्लाइंट इंस्टॉल नहीं है।</string>
+    <string name="share_subject">ब्राइटनेस कंट्रोलर एप्लीकेशन</string>
+    <string name="share_text">ब्राइटनेस कंट्रोलर:\n\n(डाउनलोड करने के लिए गूगल प्ले स्टोर में खोलें)\n%1$s</string>
+    <string name="email_subject">यूज़र फीडबैक : ब्राइटनेस कंट्रोलर एप्लीकेशन</string>
+</resources>

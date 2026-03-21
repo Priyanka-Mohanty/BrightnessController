@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ब्राइटनेस कंट्रोलर</string>
+    <string name="select_language">भाषा निवडा:</string>
+    <string name="permission_denied">सेटिंग्ज लिहिण्याची परवानगी नाकारली. अॅपला याची गरज आहे.</string>
+    <string name="brightness_level">ब्राइटनेस पातळी: %1$d</string>
+    <string name="rate_app">अॅपला रेट करा</string>
+    <string name="share_app">अॅप शेअर करा</string>
+    <string name="feedback">फीडबॅक</string>
+    <string name="no_share_app">शेअर करण्यासाठी कोणतेही अॅप इंस्टॉल केलेले नाही.</string>
+    <string name="no_email_app">कोणताही ईमेल क्लायंट इंस्टॉल केलेला नाही.</string>
+    <string name="share_subject">ब्राइटनेस कंट्रोलर अॅप्लिकेशन</string>
+    <string name="share_text">ब्राइटनेस कंट्रोलर:\n\n(डाउनलोड करण्यासाठी गुगल प्ले स्टोअरमध्ये उघडा)\n%1$s</string>
+    <string name="email_subject">वापरकर्ता फीडबॅक : ब्राइटनेस कंट्रोलर अॅप्लिकेशन</string>
+</resources>

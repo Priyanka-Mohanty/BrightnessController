@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ବ୍ରାଇଟନେସ୍ କଣ୍ଟ୍ରୋଲର୍</string>
+    <string name="select_language">ଭାଷା ଚୟନ କରନ୍ତୁ:</string>
+    <string name="permission_denied">ସେଟିଂସଲେଖିବା ପାଇଁ ଅନୁମତି ମିଳିଲା ନାହିଁ। ଆପ୍ ଏହା ଆବଶ୍ୟକ କରେ।</string>
+    <string name="brightness_level">ବ୍ରାଇଟନେସ୍ ସ୍ତର: %1$d</string>
+    <string name="rate_app">ଆପ୍ ରେଟ୍ କରନ୍ତୁ</string>
+    <string name="share_app">ଆପ୍ ଶେୟାର୍ କରନ୍ତୁ</string>
+    <string name="feedback">ଫିଡ୍‌ବ୍ୟାକ୍</string>
+    <string name="no_share_app">ଶେୟାର୍ ପାଇଁ କୌଣସି ଆପ୍ ସଂସ୍ଥାପିତ ନାହିଁ।</string>
+    <string name="no_email_app">କୌଣସି ଇମେଲ୍ କ୍ଲାଏଣ୍ଟ ସଂସ୍ଥାପିତ ନାହିଁ।</string>
+    <string name="share_subject">ବ୍ରାଇଟନେସ୍ କଣ୍ଟ୍ରୋଲର୍ ଆପ୍ଲିକେସନ୍</string>
+    <string name="share_text">ବ୍ରାଇଟନେସ୍ କଣ୍ଟ୍ରୋଲର୍:\n\n(ଡାଉନଲୋଡ୍ ପାଇଁ ଗୁଗଲ୍ ପ୍ଲେ ଷ୍ଟୋର୍‌ରେ ଖୋଲନ୍ତୁ)\n%1$s</string>
+    <string name="email_subject">ଉପଭୋକ୍ତା ଫିଡ୍‌ବ୍ୟାକ୍ : ବ୍ରାଇଟନେସ୍ କଣ୍ଟ୍ରୋଲର୍ ଆପ୍ଲିକେସନ୍</string>
+</resources>

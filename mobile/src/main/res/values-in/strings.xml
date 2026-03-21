@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Kontrol Kecerahan</string>
+    <string name="select_language">Pilih Bahasa:</string>
+    <string name="permission_denied">Izin untuk mengubah pengaturan ditolak. Aplikasi memerlukan ini.</string>
+    <string name="brightness_level">Tingkat Kecerahan: %1$d</string>
+    <string name="rate_app">Beri Nilai Aplikasi</string>
+    <string name="share_app">Bagikan Aplikasi</string>
+    <string name="feedback">Umpan Balik</string>
+    <string name="no_share_app">Tidak ada aplikasi yang terinstal untuk berbagi.</string>
+    <string name="no_email_app">Tidak ada klien email yang terinstal.</string>
+    <string name="share_subject">Aplikasi Kontrol Kecerahan</string>
+    <string name="share_text">Kontrol Kecerahan:\n\n(Buka di Google Play Store untuk Mengunduh Aplikasi)\n%1$s</string>
+    <string name="email_subject">Umpan Balik Pengguna : Aplikasi Kontrol Kecerahan</string>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">బ్రైట్‌నెస్ కంట్రోలర్</string>
+    <string name="select_language">భాషను ఎంచుకోండి:</string>
+    <string name="permission_denied">సెట్టింగ్‌లను వ్రాయడానికి అనుమతి నిరాకరించబడింది. యాప్‌కి ఇది అవసరం.</string>
+    <string name="brightness_level">బ్రైట్‌నెస్ స్థాయి: %1$d</string>
+    <string name="rate_app">యాప్‌ను రేట్ చేయండి</string>
+    <string name="share_app">యాప్‌ను షేర్ చేయండి</string>
+    <string name="feedback">ఫీడ్‌బ్యాక్</string>
+    <string name="no_share_app">షేర్ చేయడానికి ఎటువంటి యాప్ ఇన్‌స్టాల్ చేయబడలేదు.</string>
+    <string name="no_email_app">ఇమెయイル క్లయింట్ ఏదీ ఇన్‌స్టాల్ చేయబడలేదు.</string>
+    <string name="share_subject">బ్రైట్‌నెస్ కంట్రోలర్ అప్లికేషన్</string>
+    <string name="share_text">బ్రైట్‌నెస్ కంట్రోలర్:\n\n(డౌన్‌లోడ్ చేయడానికి దీన్ని Google Play స్టೋర్‌లో తెరవండి)\n%1$s</string>
+    <string name="email_subject">వినియోగదారు ఫీడ్‌బ్యాక్ : బ్రైట్‌నెస్ కంట్రోలర్ అప్లికేషన్</string>
+</resources>

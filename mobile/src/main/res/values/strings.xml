@@ -1,13 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Brightness Controller</string>
-    <string name="text_brightness">Brightness</string>
-    <string name="text_brightness_dialog">To receive relevant location based notifications you have to allow us access to your location.</string>
-    <string name="text_brightness_access">Grants full access to control the Brightness?</string>
-    <string name="text_brightness_allow">Allow Modify system settings. This permission allows an app to modify system settings.</string>
-    <string name="text_request">Allow \"Brightness Controller App\" to access you brightness while use the app.</string>
-    <string name="text_info"> "\u00A9" 2017 Brightness Controller, "\n" Version 1.0</string>
-    <string name="text_share">Share this app</string>
-    <string name="text_feedback">Feedback</string>
-    <string name="text_rate">Rate on Google Play</string>
+    <string name="select_language">Select Language:</string>
+    <string name="permission_denied">Permission to write settings denied. App requires this.</string>
+    <string name="brightness_level">Brightness Level: %1$d</string>
+    <string name="rate_app">Rate App</string>
+    <string name="share_app">Share App</string>
+    <string name="feedback">Feedback</string>
+    <string name="no_share_app">No app installed for sharing.</string>
+    <string name="no_email_app">No email client installed.</string>
+    <string name="share_subject">Brightness Controller Application</string>
+    <string name="share_text">Brightness Controller:\n\n(Open it in Google Play Store to Download the Application)\n%1$s</string>
+    <string name="email_subject">User Feedback : Brightness Controller Application</string>
 </resources>
-
