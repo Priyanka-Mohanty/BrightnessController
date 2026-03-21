@@ -4,3 +4,11 @@
 /.idea/workspace.xml
 /.idea/libraries
 /build
+.idea/
+.idea/compiler.xml
+.idea/deploymentTargetDropDown.xml
+.idea/gradle.xml
+.idea/migrations.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/sonarlint/
