@@ -39,11 +39,7 @@ class BrightnessControllerImpl(private val context: Context) : BrightnessControl
     }
 
     override fun hasWriteSettingsPermission(): Boolean {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            Settings.System.canWrite(context)
-        } else {
-            true
-        }
+        return Settings.System.canWrite(context)
     }
 }
 

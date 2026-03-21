@@ -2,7 +2,6 @@ package com.priyanka.brightnesscontroller
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.widget.Toast
@@ -10,19 +9,43 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.os.LocaleListCompat
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.material3.Button
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Slider
+import androidx.compose.material3.SliderDefaults
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
+import androidx.core.os.LocaleListCompat
 import com.priyanka.brightnesscontroller.ui.theme.BrightnessControllerTheme
+import com.priyanka.brightnesscontroller.ui.theme.TealPrimary
+import com.priyanka.brightnesscontroller.ui.theme.TealPrimaryDark
 import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
@@ -42,11 +65,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         
         // Request permissions on startup if not granted (Required for API 23+)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (!brightnessController.hasWriteSettingsPermission()) {
-                val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS, "package:$packageName".toUri())
-                permissionLauncher.launch(intent)
-            }
+        if (!brightnessController.hasWriteSettingsPermission()) {
+            val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS, "package:$packageName".toUri())
+            permissionLauncher.launch(intent)
         }
 
         setContent {
@@ -69,19 +90,19 @@ data class Language(val name: String, val code: String)
 val supportedLanguages = listOf(
     Language("Default (System)", ""),
     Language("English", "en"),
+    Language("Español (Spanish)", "es"),
+    Language("Français (French)", "fr"),
+    Language("Indonesian", "id"),
+    Language("اردو (Urdu)", "ur"),
+    Language("عربي (Arabic)", "ar"),
+    Language("ไทย (Thai)", "th"),
     Language("हिन्दी (Hindi)", "hi"),
     Language("ଓଡ଼ିଆ (Odia)", "or"),
     Language("తెలుగు (Telugu)", "te"),
     Language("ಕನ್ನಡ (Kannada)", "kn"),
     Language("मराठी (Marathi)", "mr"),
     Language("ತುಳು (Tulu)", "tcy"),
-    Language("বাংলা (Bengali)", "bn"),
-    Language("Español (Spanish)", "es"),
-    Language("Français (French)", "fr"),
-    Language("Indonesian", "id"),
-    Language("اردو (Urdu)", "ur"),
-    Language("عربي (Arabic)", "ar"),
-    Language("ไทย (Thai)", "th")
+    Language("বাংলা (Bengali)", "bn")
 )
 
 @Composable
@@ -137,6 +158,12 @@ fun BrightnessScreen(brightnessController: BrightnessController) {
     val context = LocalContext.current
     var brightness by remember { mutableFloatStateOf(brightnessController.getSystemBrightness().toFloat()) }
     
+    val shareSubject = stringResource(R.string.share_subject)
+    val shareTextTemplate = stringResource(R.string.share_text)
+    val noShareApp = stringResource(R.string.no_share_app)
+    val emailSubject = stringResource(R.string.email_subject)
+    val noEmailApp = stringResource(R.string.no_email_app)
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -154,7 +181,7 @@ fun BrightnessScreen(brightnessController: BrightnessController) {
         Spacer(modifier = Modifier.height(32.dp))
 
         Text(text = stringResource(R.string.brightness_level, brightness.toInt()))
-        
+
         Slider(
             value = brightness,
             onValueChange = { newValue ->
@@ -162,15 +189,13 @@ fun BrightnessScreen(brightnessController: BrightnessController) {
                 if (brightnessController.hasWriteSettingsPermission()) {
                     brightnessController.setSystemBrightness(newValue.toInt())
                 }
-                
-                // Note: The legacy app also updated layoutpars.screenBrightness
+
                 var activity = context as? ComponentActivity
                 var ctx = context
                 while (activity == null && ctx is android.content.ContextWrapper) {
                     ctx = ctx.baseContext
                     activity = ctx as? ComponentActivity
                 }
-                
                 if (activity?.window != null) {
                     val attrs = activity.window.attributes
                     attrs.screenBrightness = newValue / 255f
@@ -178,9 +203,18 @@ fun BrightnessScreen(brightnessController: BrightnessController) {
                 }
             },
             valueRange = 0f..255f,
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp),
+            // FORCE COLORS TO RESET THE THUMB SHAPE
+            colors = SliderDefaults.colors(
+                thumbColor = TealPrimaryDark,           // This forces the thumb to be your Teal
+                activeTrackColor = TealPrimary,      // The line to the left
+                inactiveTrackColor = TealPrimary.copy(alpha = 0.30f), // The line to the right
+                activeTickColor = Color.Transparent, // REMOVES THE DOTS
+                inactiveTickColor = Color.Transparent // REMOVES THE DOTS
+            )
         )
-
         Spacer(modifier = Modifier.height(48.dp))
 
         Button(onClick = {
@@ -203,13 +237,13 @@ fun BrightnessScreen(brightnessController: BrightnessController) {
             val shareBody = "https://play.google.com/store/apps/details?id=${context.packageName}"
             val sharingIntent = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
-                putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.share_subject))
-                putExtra(Intent.EXTRA_TEXT, context.getString(R.string.share_text, shareBody))
+                putExtra(Intent.EXTRA_SUBJECT, shareSubject)
+                putExtra(Intent.EXTRA_TEXT, shareTextTemplate.format(shareBody))
             }
             try {
                 context.startActivity(Intent.createChooser(sharingIntent, "Share via"))
             } catch (_: Exception) {
-                Toast.makeText(context, context.getString(R.string.no_share_app), Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, noShareApp, Toast.LENGTH_SHORT).show()
             }
         }, modifier = Modifier.fillMaxWidth()) {
             Text(text = stringResource(R.string.share_app))
@@ -221,12 +255,12 @@ fun BrightnessScreen(brightnessController: BrightnessController) {
             val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
                 data = "mailto:".toUri()
                 putExtra(Intent.EXTRA_EMAIL, arrayOf("appfeedbackpriyanka@gmail.com"))
-                putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.email_subject))
+                putExtra(Intent.EXTRA_SUBJECT, emailSubject)
             }
             try {
                 context.startActivity(Intent.createChooser(emailIntent, "Send mail"))
             } catch (_: ActivityNotFoundException) {
-                Toast.makeText(context, context.getString(R.string.no_email_app), Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, noEmailApp, Toast.LENGTH_SHORT).show()
             }
         }, modifier = Modifier.fillMaxWidth()) {
             Text(text = stringResource(R.string.feedback))
