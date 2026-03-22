@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
@@ -6,12 +8,12 @@ plugins {
 
 android {
     namespace 'com.priyanka.brightnesscontroller'
-    compileSdk 36
+    compileSdk = 36
 
     defaultConfig {
         applicationId "com.priyanka.brightnesscontroller"
-        minSdk 23
-        targetSdk 36
+        minSdk = 23
+        targetSdk = 36
         versionCode 2
         versionName "2.0"
 
@@ -33,11 +35,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = '17'
-    }
+
     buildFeatures {
         compose true
+    }
+}
+
+// Kotlin compiler options should be defined at the top level or via the AGP extension interface
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_17
     }
 }
 
